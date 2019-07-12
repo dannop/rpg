@@ -13,3 +13,146 @@
  *= require_tree .
  *= require_self
  */
+
+ /* Toast */
+#toast {
+    visibility: hidden;
+    overflow: hidden;
+    max-width: 550px;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    border-radius: 0px;
+    position: fixed;
+    z-index: 1;
+    left: 0;right:0;
+    top: 30px;
+    font-size: 17px;
+    white-space: nowrap;
+    font-family: 'Circular', Helvetica;
+    font-weight: 500;
+    box-shadow: -2px 1px 12px 0px rgba(0, 0, 0, 0.85);
+    -webkit-box-shadow: -2px 1px 12px 0px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow: -2px 1px 12px 0px rgba(0, 0, 0, 0.85);
+}
+
+#toast #img{
+	width: 50px;
+	height: 50px;
+    float: left;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+    background-color: #434343;
+    color: #fff;
+    font-family: 'Circular', Helvetica;
+    font-weight: 900;
+}
+
+#toast #warning{    
+    background-image: image-url('avisotoast.png'); 
+    background-repeat: no-repeat;
+    background-position: 25px center;
+    background-color: #F3AA12;
+    overflow: hidden;
+    padding: 25px;
+	white-space: nowrap;
+}
+
+#toast #alert{    
+    background-image: image-url('avisotoast.png'); 
+    background-repeat: no-repeat;
+    background-position: 25px center;
+    background-color: #F3AA12;
+    overflow: hidden;
+    padding: 25px;
+	white-space: nowrap;
+}
+
+#toast #success{    
+    background-image: image-url('successtoast.png'); 
+    background-repeat: no-repeat;
+    background-position: 25px center;
+    background-color: #5CCE6C; 
+    overflow: hidden;
+	white-space: nowrap;
+    padding: 25px;
+}
+
+#toast #notice{    
+    background-image: image-url('successtoast.png'); 
+    background-repeat: no-repeat;
+    background-position: 25px center;
+    background-color: #5CCE6C; 
+    overflow: hidden;
+	white-space: nowrap;
+    padding: 25px;
+}
+
+#toast #danger{    
+    background-image: image-url('errotoast.png'); 
+    background-repeat: no-repeat;
+    background-position: 25px center;
+    background-color: #FF0000; 
+    overflow: hidden;
+	white-space: nowrap;
+    padding: 25px;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;} 
+    to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes expand {
+    from {min-width: 550px} 
+    to {min-width: 550px}
+}
+
+@keyframes expand {
+    from {min-width: 550px}
+    to {min-width: 550px}
+}
+@-webkit-keyframes stay {
+    from {min-width: 550px} 
+    to {min-width: 550px}
+}
+
+@keyframes stay {
+    from {min-width: 550px}
+    to {min-width: 550px}
+}
+@-webkit-keyframes shrink {
+    from {min-width: 550px;} 
+    to {min-width: 550px;}
+}
+
+@keyframes shrink {
+    from {min-width: 550px;} 
+    to {min-width: 550px;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;} 
+    to {top: 60px; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 60px; opacity: 0;}
+}
+/* Fim - Toast */

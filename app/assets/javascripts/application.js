@@ -11,6 +11,25 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+function launch_toast() {
+    var x = document.getElementById("toast");
+    if (x){
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+    }
+}
+
+function create_toast(msg, type){
+    $('body').prepend(`<div id="toast"><div id=${type}>${msg}</div></div>`);
+}
+
+$(document).ready( function () {
+
+    launch_toast();
+
+});
