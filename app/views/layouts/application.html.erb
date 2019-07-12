@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BomcupomInterno</title>
+    <title>Sistema Interno | Bom Cupom</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,15 @@
   </head>
 
   <body>
+
+    <% flash.each do |key, value| %>
+      <div id="toast" >
+        <div id="<%= key %>">
+          <%= value %>
+        </div>
+      </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
