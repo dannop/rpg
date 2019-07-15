@@ -18,6 +18,8 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
+# PostgreSQL
+gem 'pg'
 # Adicionado jQuery
 gem 'jquery-rails'
 # Adicionando devise para cadastro de usuarios
