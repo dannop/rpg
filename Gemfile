@@ -22,7 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'pg'
 # Adicionado jQuery
 gem 'jquery-rails'
-# Adicionando devise para cadastro de usuarios
+# Adicionando devise para cadastro e login de usuarios
 gem 'devise'
 # Usando rubocop para qualidade do codigo
 gem 'rubocop', require: false
@@ -40,6 +40,10 @@ gem 'jbuilder', '~> 2.5'
 # Internacionalizacao
 gem 'rails-i18n', '~> 5.1'
 gem 'devise-i18n'
+gem 'cardinality-br', require: 'brazilian_cardinality'
+
+# Auxilio para utilizar o decorator
+gem 'draper'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
