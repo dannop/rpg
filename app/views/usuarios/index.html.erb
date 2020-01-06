@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Usuarios</h1>
+
+<%= render 'layouts/ajax_table', url: usuarios_path(format: :json), id: 'data-table' %>
+
+<br>
+
+<%= link_to 'New Usuario', new_usuario_path %>

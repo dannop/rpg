@@ -1,0 +1,70 @@
+<table id="<%= id %>" data-source="<%= url %>">
+  <thead>
+    <tr>
+      <% @table_data.each do |d| %>
+        <th> <%=  d[1][:column] %> </th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<script>
+    jQuery(document).ready(function() {
+        let tabela = $('#<%= id %>');
+        let dt_tabela = tabela.dataTable({
+            "processing": true,
+            "serverSide": true,
+            "ajax": tabela.data('source'),
+            "pagingType": "full_numbers",
+            "columns": [
+                <% @table_data.each do |d| %>
+                  {"data": "<%=  d[0] %>" },
+                <% end %>
+            ],
+            language: {
+                "sEmptyTable": "Nenhum registro encontrado",
+                "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+                "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+                "sInfoPostFix": "",
+                "sInfoThousands": ".",
+                "sLengthMenu": "_MENU_ resultados por página",
+                "sLoadingRecords": "Carregando...",
+                "sProcessing": "Processando...",
+                "sZeroRecords": "Nenhum registro encontrado",
+                "sSearch": "",
+                "searchPlaceholder": "Procurar",
+                "oPaginate": {
+                    "sNext": "Próximo",
+                    "sPrevious": "Anterior",
+                    "sFirst": "Primeiro",
+                    "sLast": "Último"
+                },
+                "oAria": {
+                    "sSortAscending": ": Ordenar colunas de forma ascendente",
+                    "sSortDescending": ": Ordenar colunas de forma descendente"
+                }
+            }
+        });
+
+        let filter = $('div.dataTables_filter input');
+        let searchDelay = null;
+        let searchDelayTime = 200;
+
+        filter.off('keyup.DT input.DT');
+
+        filter.on('keyup', function() {
+            let search = filter.val();
+
+            clearTimeout(searchDelay);
+
+            searchDelay = setTimeout(function() {
+                if (search != null) {
+                    dt_tabela.fnFilter(search);
+                }
+            }, searchDelayTime);
+        });
+    });
+</script>
