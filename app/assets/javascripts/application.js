@@ -11,9 +11,15 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require jquery
+//= require jquery3
+//= require jquery_ujs
+//= require jquery.mask
+//= require select2
 //= require activestorage
 //= require turbolinks
+//= require popper
+//= require bootstrap
+//= require datatables
 //= require_tree .
 
 function launch_toast() {
@@ -29,7 +35,21 @@ function create_toast(msg, type){
 }
 
 $(document).ready( function () {
-
     launch_toast();
 
+    $("select").select2({
+        placeholder: "Selecione uma opção",
+    }); 
+
+    var maskBehavior = function (val) {
+        return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+    },
+    options = {
+        onKeyPress: function(val, e, field, options) {
+            field.mask(maskBehavior.apply({}, arguments), options);
+        }
+    };
+    $('.telefone').mask(maskBehavior, options);
+    $('.rg').mask('99.999.999-9');
+    $('.cpf').mask('999.999.999-99');
 });

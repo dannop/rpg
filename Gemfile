@@ -5,10 +5,39 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
 
+# Adicionando devise para cadastro e login de usuarios
+gem 'devise'
+
+# Adicionado jQuery
+gem 'jquery-rails'
+# Instalando a datatable
+gem 'ajax-datatables-rails'
+gem 'jquery-datatables'
+# Usando mascaras de inputs
+gem 'jquery_mask_rails', '~> 0.1.0'
+# gem Bootstrap 4 para estilização
+gem 'bootstrap'
+# gem complementar ao Bootstrap 4
+gem 'popper_js'
+# gem FontAwesome 5.9
+gem 'font-awesome-sass'
+# Mudando o select dinamico
+gem "select2-rails"
+
+# Exportando planilha excel
+# gem 'axlsx_rails'
+# Importando planilha excel
+# gem "roo"
+# Criando pdf 
+# gem 'wicked_pdf'
+# gem 'wkhtmltopdf-binary'
+# gem 'combine_pdf'
+# Exibir tabelas e graficos
+# gem 'chartkick'
+# gem 'groupdate'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -20,10 +49,8 @@ gem 'uglifier', '>= 1.3.0'
 
 # PostgreSQL
 gem 'pg'
-# Adicionado jQuery
-gem 'jquery-rails'
-# Adicionando devise para cadastro e login de usuarios
-gem 'devise'
+# Base de dados de endereços brasileiros
+# gem 'conecta_address_br'
 # Usando rubocop para qualidade do codigo
 gem 'rubocop', require: false
 # Use CoffeeScript for .coffee assets and views
@@ -36,10 +63,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# Bucket de arquivos no AWS
+gem "aws-sdk-s3", require: false
 
 # Internacionalizacao
 gem 'rails-i18n', '~> 5.1'
 gem 'devise-i18n'
+# Escrevendo numeros por extenso
 gem 'cardinality-br', require: 'brazilian_cardinality'
 
 # Auxilio para utilizar o decorator

@@ -12,7 +12,15 @@
  *
  *= require_tree .
  *= require_self
+ *= require fonts
+ *= require select2
+ *= require select2-bootstrap
+ *= require datatables
  */
+
+ @import 'bootstrap';
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
 
  /* Toast */
 #toast {

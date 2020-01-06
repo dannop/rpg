@@ -1,0 +1,167 @@
+@import 'datatables/jquery.dataTables';
+
+// optional remove '//=' to enable
+
+//@import 'datatables/extensions/AutoFill/autoFill.dataTables';
+//@import 'datatables/extensions/Buttons/buttons.dataTables';
+//@import 'datatables/extensions/ColReorder/colReorder.dataTables';
+//@import 'datatables/extensions/FixedColumns/fixedColumns.dataTables';
+//@import 'datatables/extensions/FixedHeader/fixedHeader.dataTables';
+//@import 'datatables/extensions/KeyTable/keyTable.dataTables';
+//@import 'datatables/extensions/Responsive/responsive.dataTables';
+//@import 'datatables/extensions/RowGroup/rowGroup.dataTables';
+//@import 'datatables/extensions/RowReorder/rowReorder.dataTables';
+//@import 'datatables/extensions/Scroller/scroller.dataTables';
+//@import 'datatables/extensions/Select/select.dataTables';
+
+  
+.tableSystem {
+    width: 80%;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, .16);
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#data-table {
+    border: none;
+}
+
+.dataTables_length label {
+    margin-bottom: 50px;
+    font-family: 'AvenirNextPro-Regular';
+    color: #000;
+    font-size: 14px;
+}
+
+.dataTables_length label select:focus {
+    outline: none;
+}
+
+.dataTables_filter label input {
+    min-width: 270px;
+    height: 35px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding-left: 30px;
+    background-image: url("search.png");
+    background-repeat: no-repeat;
+    background-position: 8px;
+}
+
+.dataTables_filter label input:focus {
+    outline: none;
+}
+
+#data-table thead th {
+    border: none;
+    margin-top: 50px;
+    font-family: 'Circular-Medium';
+    color: #000;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 100;
+    padding: 10px 20px;
+}
+
+#data-table thead th:focus {
+    outline: none;
+}
+
+#data-table tbody .odd {
+    background-color: rgba(123, 33, 130, 0.1);
+    padding: 15px;
+}
+
+#data-table tbody td {
+    padding: 20px;
+    font-family: 'AvenirNextPro-Regular';
+    color: #000;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#data-table tbody td a {
+    line-height: 1
+}
+
+.dataTables_info {
+    display: none;
+}
+
+#data-table_first, #data-table_last {
+    display: none;
+}
+
+#data-table_wrapper .dataTables_paginate .paginate_button {
+    background-color: transparent !important;
+    border: none;
+    background: none;
+    font-family: 'Avenir-Heavy';
+    color: #000;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1;
+    cursor: pointer;
+}
+
+#data-table_wrapper .dataTables_paginate .paginate_button:active {
+    box-shadow: none;
+}
+
+.dataTables_paginate  {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#data-table_wrapper .paginate_button.current:hover {
+    color: #000 !important;
+}
+
+#data-table_wrapper .dataTables_paginate .paginate_button:focus {
+    outline: none;
+}
+
+#data-table_paginate .previous, #data-table_paginate .next  {
+    color: transparent !important;
+    cursor: pointer;
+}
+
+#data-table_paginate .previous::after {
+    content: url("prev.png");
+}
+
+#data-table_paginate .next::after {
+    content: url("next.png");
+    float: left;
+}
+
+.showButton {
+    color: #fff;
+    font-size: 13px;
+    padding: 5px;
+    margin: 0 5px;
+    background-color: #5CCE6C;
+    border-radius: 50%;
+}
+
+.editButton {
+    color: #fff;
+    font-size: 13px;
+    padding: 5px;
+    margin: 0 5px;
+    background-color: #F3AA12;
+    border-radius: 50%;
+}
+
+.deleteButton {
+    color: #fff;
+    font-size: 13px;
+    padding: 5px 7px;
+    margin: 0 5px;
+    background-color: #FF0000;
+    border-radius: 50%;
+}
