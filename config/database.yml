@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: projeto_base_rails_development
+  database: rpg_development
   username: postgres
   password: postgres
   host: localhost
@@ -32,7 +32,7 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: projeto_base_rails
+  #username: rpg
 
   # The password associated with the postgres role (username).
   #password:
@@ -47,7 +47,7 @@ development:
   #port: 5432
 
   # Schema search path. The server defaults to $user,public
-  #schema_search_path: projeto_base_rails,sharedapp,public
+  #schema_search_path: rpg,sharedapp,public
 
   # Minimum log levels, in increasing order:
   #   debug5, debug4, debug3, debug2, debug1,
@@ -60,7 +60,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: projeto_base_rails_test
+  database: rpg_test
   username: postgres
   password: postgres
   host: localhost
@@ -87,6 +87,6 @@ test:
 #
 production:
   <<: *default
-  database: projeto_base_rails_production
-  username: projeto_base_rails
+  database: rpg_production
+  username: rpg
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
