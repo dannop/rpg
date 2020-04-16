@@ -88,5 +88,5 @@ test:
 production:
   <<: *default
   database: rpg_production
-  username: rpg
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  username: postgres
+  password: postgres
