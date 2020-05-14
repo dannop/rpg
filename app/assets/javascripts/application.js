@@ -31,7 +31,7 @@ function launch_toast() {
 }
 
 function create_toast(msg, type){
-    $('body').prepend(`<div id="toast"><div id=${type}>${msg}</div></div>`);
+    $('body').prepend("<div id='toast'><div id="+type+">"+msg+"</div></div>");
 }
 
 $(document).ready( function () {
